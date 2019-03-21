@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "serviceUniqueIdentifier": {
+      "value": "pizza"
+    },
+    "applicationInsightsName": {
+      "value": "ai-pizza"
+    },
+    "keyVaultAccessPolicyGroupId": {
+      "value": "3c7009c1-d52f-4330-84ee-b128bd1ba57f"
+    }
+  }
+}
