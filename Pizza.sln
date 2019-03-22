@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ResourceGroup", "ResourceGroup\ResourceGroup.deployproj", "{623933D4-ACD2-4341-A661-20D1BE58D8F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaFunction", "PizzaFunction\PizzaFunction.csproj", "{0FB4F0CF-EE55-431E-9D38-DF324A3B8ACB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaFunction", "PizzaFunction\PizzaFunction.csproj", "{0FB4F0CF-EE55-431E-9D38-DF324A3B8ACB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzabodemFunction", "PizzabodemFunction\PizzabodemFunction.csproj", "{6C522532-20BC-4DC4-9581-C21880FA0BB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0FB4F0CF-EE55-431E-9D38-DF324A3B8ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FB4F0CF-EE55-431E-9D38-DF324A3B8ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FB4F0CF-EE55-431E-9D38-DF324A3B8ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C522532-20BC-4DC4-9581-C21880FA0BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C522532-20BC-4DC4-9581-C21880FA0BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C522532-20BC-4DC4-9581-C21880FA0BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C522532-20BC-4DC4-9581-C21880FA0BB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
