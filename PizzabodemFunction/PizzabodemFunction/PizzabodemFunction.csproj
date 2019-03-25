@@ -8,7 +8,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Pizza.Models">
-      <HintPath>..\Shared\Pizza.Models.dll</HintPath>
+      <HintPath>..\..\Shared\Pizza.Models.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

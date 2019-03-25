@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzabodemFunction", "PizzabodemFunction\PizzabodemFunction.csproj", "{37AD9702-78A9-49D5-BA5F-ADF8BA6AB26F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TomatensausFunction", "TomatensausFunction\TomatensausFunction.csproj", "{37AD9702-78A9-49D5-BA5F-ADF8BA6AB26F}"
 EndProject
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ResourceGroup", "ResourceGroup\ResourceGroup.deployproj", "{FADD3EBF-945D-4BEB-BABF-39AF5F45ACAB}"
 EndProject
