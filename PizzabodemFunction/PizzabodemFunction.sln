@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzabodemFunction", "PizzabodemFunction.csproj", "{37AD9702-78A9-49D5-BA5F-ADF8BA6AB26F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37AD9702-78A9-49D5-BA5F-ADF8BA6AB26F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37AD9702-78A9-49D5-BA5F-ADF8BA6AB26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37AD9702-78A9-49D5-BA5F-ADF8BA6AB26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37AD9702-78A9-49D5-BA5F-ADF8BA6AB26F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24AB111F-EEC7-42CE-966E-112AFC5156F3}
+	EndGlobalSection
+EndGlobal
