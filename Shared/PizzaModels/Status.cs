@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Pizza.Models
+namespace PizzaModels
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public enum Status

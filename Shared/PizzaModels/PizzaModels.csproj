@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Pizza.Models</AssemblyName>
-    <RootNamespace>Pizza.Models</RootNamespace>
+    <AssemblyName>PizzaModels</AssemblyName>
+    <RootNamespace>PizzaModels</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

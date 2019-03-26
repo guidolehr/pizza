@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaFunction", "PizzaFunction\PizzaFunction.csproj", "{77E19AAB-FFC5-491A-8FB9-31FFC1272A6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaakPizzaFunction", "MaakPizzaFunction\MaakPizzaFunction.csproj", "{77E19AAB-FFC5-491A-8FB9-31FFC1272A6C}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ResourceGroup", "ResourceGroup\ResourceGroup.deployproj", "{C03F0161-8777-4736-85AE-D2DB167F15E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{77E19AAB-FFC5-491A-8FB9-31FFC1272A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77E19AAB-FFC5-491A-8FB9-31FFC1272A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77E19AAB-FFC5-491A-8FB9-31FFC1272A6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C03F0161-8777-4736-85AE-D2DB167F15E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C03F0161-8777-4736-85AE-D2DB167F15E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C03F0161-8777-4736-85AE-D2DB167F15E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C03F0161-8777-4736-85AE-D2DB167F15E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

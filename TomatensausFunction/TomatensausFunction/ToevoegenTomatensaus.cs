@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using PizzaModels;
 
 namespace PizzabodemFunction
 {
@@ -21,7 +22,7 @@ namespace PizzabodemFunction
             log.LogInformation("Adding tomatensaus to pizza");
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            var pizza = JsonConvert.DeserializeObject<Pizza.Models.Pizza>(requestBody);
+            var pizza = JsonConvert.DeserializeObject<Pizza>(requestBody);
 
             pizza.Ingredienten.Add("tomatensaus");
             
