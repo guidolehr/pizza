@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using PizzaModels;
 
 namespace PizzabodemFunction
 {
@@ -15,13 +16,13 @@ namespace PizzabodemFunction
     {
         [FunctionName("toevoegen-pizzabodem")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("Adding pizzabodem to pizza");
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            var pizza = JsonConvert.DeserializeObject<Pizza.Models.Pizza>(requestBody);
+            var pizza = JsonConvert.DeserializeObject<Pizza>(requestBody);
 
             pizza.Ingredienten.Add("pizzabodem");
             
