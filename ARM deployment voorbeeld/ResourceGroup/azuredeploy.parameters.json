@@ -3,13 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "serviceUniqueIdentifier": {
-      "value": "pizza"
+      "value": "pizzapepperoni"
     },
     "applicationInsightsName": {
-      "value": "ai-pizza"
-    },
-    "keyVaultAccessPolicyGroupId": {
-      "value": "3c7009c1-d52f-4330-84ee-b128bd1ba57f"
+      "value": "pizza"
     }
   }
 }
