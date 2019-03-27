@@ -2,7 +2,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.Azure.WebJobs.Host;
+using Microsoft.Extensions.Logging;
 using PizzaModels;
 
 namespace MaakPizzaFunction
@@ -22,9 +22,9 @@ namespace MaakPizzaFunction
         }
 
         [FunctionName("MaakPizzaFunction_ToevoegenPizzabodem")]
-        public static async Task<Pizza> ToevoegenPizzabodem([ActivityTrigger] Pizza pizza, TraceWriter log)
+        public static async Task<Pizza> ToevoegenPizzabodem([ActivityTrigger] Pizza pizza, ILogger log)
         {
-            log.Info($"Toevoegen Pizzabodem");
+            log.LogInformation($"Toevoegen Pizzabodem");
 
             using (var client = new HttpClient())
             {
@@ -37,9 +37,9 @@ namespace MaakPizzaFunction
         }
 
         [FunctionName("MaakPizzaFunction_ToevoegenTomatensaus")]
-        public static async Task<Pizza> ToevoegenTomatensaus([ActivityTrigger] Pizza pizza, TraceWriter log)
+        public static async Task<Pizza> ToevoegenTomatensaus([ActivityTrigger] Pizza pizza, ILogger log)
         {
-            log.Info($"Toevoegen Tomatensaus");
+            log.LogInformation($"Toevoegen Tomatensaus");
 
             using (var client = new HttpClient())
             {
@@ -55,12 +55,12 @@ namespace MaakPizzaFunction
         public static async Task<HttpResponseMessage> HttpStart(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")]HttpRequestMessage req,
             [OrchestrationClient]DurableOrchestrationClient starter,
-            TraceWriter log)
+            ILogger log)
         {
             // Function input comes from the request content.
             string instanceId = await starter.StartNewAsync("MaakPizzaFunction", null);
 
-            log.Info($"Started orchestration with ID = '{instanceId}'.");
+            log.LogInformation($"Started orchestration with ID = '{instanceId}'.");
 
             return starter.CreateCheckStatusResponse(req, instanceId);
         }
