@@ -6,8 +6,7 @@ namespace PizzaModels
     [JsonConverter(typeof(StringEnumConverter))]
     public enum Status
     {
-        Ongebakken,
-        Gebakken,
-        Bezorgd
+        ongebakken,
+        gebakken
     }
 }

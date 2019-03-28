@@ -31,7 +31,7 @@ namespace OvenFunction
             log.LogInformation("Wachten totdat pizza gebakken is");
 
             await Task.Delay(new Random().Next(30000, 90000)); // Wacht 30-90 seconden
-            pizza.Status = Status.Gebakken;
+            pizza.Status = Status.gebakken;
 
             return pizza;
         }
@@ -45,7 +45,7 @@ namespace OvenFunction
             string requestBody = await req.Content.ReadAsStringAsync();
             var pizza = JsonConvert.DeserializeObject<Pizza>(requestBody);
 
-            string instanceId = await starter.StartNewAsync("bak-pizza-orchestrator", pizza);
+            string instanceId = await starter.StartNewAsync("BakPizza", pizza);
 
             log.LogInformation($"Started orchestration with ID = '{instanceId}'.");
 
