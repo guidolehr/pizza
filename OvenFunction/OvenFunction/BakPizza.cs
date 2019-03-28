@@ -14,19 +14,19 @@ namespace OvenFunction
 {
     public static class BakPizza
     {
-        [FunctionName("bak-pizza-orchestrator")]
+        [FunctionName("BakPizza")]
         public static async Task<Pizza> RunOrchestrator(
             [OrchestrationTrigger] DurableOrchestrationContext context)
         {
             Pizza pizza = context.GetInput<Pizza>();
 
-            pizza = await context.CallActivityAsync<Pizza>("wacht-op-gebakken-pizza", pizza);
+            pizza = await context.CallActivityAsync<Pizza>("BakPizza_Wachten", pizza);
 
             return pizza;
         }
 
-        [FunctionName("wacht-op-gebakken-pizza")]
-        public static async Task<Pizza> WachtOpGebakkenPizza([ActivityTrigger] Pizza pizza, ILogger log)
+        [FunctionName("BakPizza_Wachten")]
+        public static async Task<Pizza> Wachten([ActivityTrigger] Pizza pizza, ILogger log)
         {
             log.LogInformation("Wachten totdat pizza gebakken is");
 
@@ -36,7 +36,7 @@ namespace OvenFunction
             return pizza;
         }
 
-        [FunctionName("bak-pizza")]
+        [FunctionName("BakPizza_HttpStart")]
         public static async Task<HttpResponseMessage> HttpStart(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "bak-pizza")]HttpRequestMessage req,
             [OrchestrationClient]DurableOrchestrationClient starter,

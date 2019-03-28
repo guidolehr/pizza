@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ResourceGroup", "ResourceGroup\ResourceGroup.deployproj", "{FADD3EBF-945D-4BEB-BABF-39AF5F45ACAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OvenFunction", "OvenFunction\OvenFunction.csproj", "{E4CD91EE-C2D5-416D-A90E-A817AB51E457}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OvenFunction", "OvenFunction\OvenFunction.csproj", "{E4CD91EE-C2D5-416D-A90E-A817AB51E457}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
