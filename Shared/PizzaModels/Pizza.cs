@@ -8,10 +8,12 @@ namespace PizzaModels
 
         public Status Status { get; set; }
 
+        public string Naam { get; set; }
+
         public Pizza()
         {
             this.Ingredienten = new List<string>();
-            this.Status = Status.Ongebakken;
+            this.Status = Status.ongebakken;
         }
     }
 }
