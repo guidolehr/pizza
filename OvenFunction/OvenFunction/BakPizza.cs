@@ -38,7 +38,7 @@ namespace OvenFunction
 
         [FunctionName("BakPizza_HttpStart")]
         public static async Task<HttpResponseMessage> HttpStart(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "bak-pizza")]HttpRequestMessage req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post")]HttpRequestMessage req,
             [OrchestrationClient]DurableOrchestrationClient starter,
             ILogger log)
         {

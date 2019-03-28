@@ -16,7 +16,7 @@ namespace PizzabodemFunction
     {
         [FunctionName("ToevoegenTomatensaus")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "toevoegen-tomatensaus")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("Adding tomatensaus to pizza");
