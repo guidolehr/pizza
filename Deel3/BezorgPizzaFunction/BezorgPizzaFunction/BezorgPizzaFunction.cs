@@ -31,7 +31,7 @@ namespace BezorgPizzaFunction
 
             using (var client = new HttpClient())
             {
-                string functionUri = "https://pizzabodem-func-euw-o.azurewebsites.net/api/toevoegen-pizzabodem";
+                string functionUri = "https://pizzabodem-func-euw-o.azurewebsites.net/api/ToevoegenPizzabodem";
 
                 var response = await client.PostAsJsonAsync(functionUri, pizza);
 
@@ -46,7 +46,7 @@ namespace BezorgPizzaFunction
 
             using (var client = new HttpClient())
             {
-                string functionUri = "https://tomatensaus-func-euw-o.azurewebsites.net/api/toevoegen-tomatensaus";
+                string functionUri = "https://tomatensaus-func-euw-o.azurewebsites.net/api/ToevoegenTomatensaus";
 
                 var response = await client.PostAsJsonAsync(functionUri, pizza);
 
