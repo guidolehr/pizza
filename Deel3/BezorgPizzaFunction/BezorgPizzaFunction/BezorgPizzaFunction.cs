@@ -19,6 +19,7 @@ namespace BezorgPizzaFunction
 
             pizza = await context.CallActivityAsync<Pizza>("BezorgPizzaFunction_ToevoegenPizzabodem", pizza);
             pizza = await context.CallActivityAsync<Pizza>("BezorgPizzaFunction_ToevoegenTomatensaus", pizza);
+            pizza = await context.CallActivityAsync<Pizza>("BezorgPizzaFunction_BakPizza", pizza);
             pizza = await context.CallActivityAsync<Pizza>("BezorgPizzaFunction_BezorgPizza", pizza);
 
             return pizza;
@@ -51,6 +52,27 @@ namespace BezorgPizzaFunction
                 var response = await client.PostAsJsonAsync(functionUri, pizza);
 
                 return await response.Content.ReadAsAsync<Pizza>();
+            }
+        }
+
+        [FunctionName("BezorgPizzaFunction_BakPizza")]
+        public static async Task<Pizza> BakPizza([ActivityTrigger] Pizza pizza, ILogger log)
+        {
+            log.LogInformation($"Pizza bakken in oven");
+
+            using (var client = new HttpClient())
+            {
+                var functionUri = new Uri("https://oven-func-euw-o.azurewebsites.net/api/BakPizza_HttpStart");
+
+                var response = await client.PostAsJsonAsync(functionUri, pizza);
+
+                while (response.StatusCode == System.Net.HttpStatusCode.Accepted)
+                {
+                    response = await client.GetAsync(response.Headers.Location);
+                }
+
+                var ovenStatus = await response.Content.ReadAsAsync<OvenStatus>();
+                return ovenStatus.Output;
             }
         }
 
